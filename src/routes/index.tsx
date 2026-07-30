@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <h1 className="sr-only">Niranjana Rema — playback singer, Carnatic vocalist and vocal coach</h1>
+      
       <Hero />
       <About />
       <Services />
