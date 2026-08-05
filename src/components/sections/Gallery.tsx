@@ -28,7 +28,7 @@ export function Gallery({ full = false }: { full?: boolean }) {
                   src={s.src}
                   alt={s.alt}
                   loading="lazy"
-                  className="max-h-[70vh] w-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="max-h-[80vh] w-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <figcaption className="px-1 pb-1 pt-3 text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground">
                   {s.alt}
