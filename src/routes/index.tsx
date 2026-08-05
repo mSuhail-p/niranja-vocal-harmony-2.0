@@ -5,11 +5,7 @@ import { Services } from "@/components/sections/Services";
 import { Academy } from "@/components/sections/Academy";
 import { Gallery } from "@/components/sections/Gallery";
 import { MusicPlayer } from "@/components/sections/MusicPlayer";
-import { Events } from "@/components/sections/Events";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Awards } from "@/components/sections/Awards";
 import { Booking } from "@/components/sections/Booking";
-import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 import { images } from "@/lib/site-data";
 
@@ -49,18 +45,13 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      
       <Hero />
       <About />
       <Services />
       <Academy />
       <Gallery />
       <MusicPlayer />
-      <Events />
-      <Testimonials />
-      <Awards />
       <Booking />
-      <Faq />
       <Contact />
     </>
   );
