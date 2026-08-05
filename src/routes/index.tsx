@@ -49,18 +49,13 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      
       <Hero />
       <About />
       <Services />
       <Academy />
       <Gallery />
       <MusicPlayer />
-      <Events />
-      <Testimonials />
-      <Awards />
       <Booking />
-      <Faq />
       <Contact />
     </>
   );
