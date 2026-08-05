@@ -6,8 +6,12 @@ export function About() {
     <section id="about" className="mx-auto max-w-7xl px-5 py-24 sm:py-32">
       <div className="grid items-center gap-14 lg:grid-cols-2">
         <Reveal className="relative">
-          <div className="relative aspect-4/5 overflow-hidden rounded-sm border border-border">
-            <img src={images.saree} alt="Niranjana Rema in a traditional silk saree" className="size-full object-cover" />
+          <div className="relative overflow-hidden rounded-sm border border-border bg-card/40 p-2">
+            <img
+              src={images.saree}
+              alt="Niranjana Rema in a traditional silk saree"
+              className="max-h-[75vh] w-full object-contain"
+            />
           </div>
           <div className="glass absolute -bottom-8 -right-2 hidden w-56 rounded-sm p-5 sm:block">
             <p className="font-display text-4xl text-gold-gradient">MA</p>
