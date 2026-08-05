@@ -22,7 +22,7 @@ export function Hero() {
         <img
           src={images.tanpuraBw}
           alt="Niranjana Rema performing with a tanpura"
-          className="size-full object-cover object-[60%_25%] lg:object-contain lg:object-right-bottom"
+          className="size-full object-cover object-top lg:object-contain lg:object-right-bottom"
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--background)_8%,transparent_75%)] lg:bg-[linear-gradient(to_right,var(--background),transparent_45%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--background),transparent_55%)]" />
