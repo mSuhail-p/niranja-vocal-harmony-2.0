@@ -5,6 +5,7 @@ import { Services } from "@/components/sections/Services";
 import { Academy } from "@/components/sections/Academy";
 import { Gallery } from "@/components/sections/Gallery";
 import { MusicPlayer } from "@/components/sections/MusicPlayer";
+import { News } from "@/components/sections/News";
 import { Booking } from "@/components/sections/Booking";
 import { Contact } from "@/components/sections/Contact";
 import { images } from "@/lib/site-data";
@@ -51,6 +52,7 @@ function Index() {
       <Academy />
       <Gallery />
       <MusicPlayer />
+      <News />
       <Booking />
       <Contact />
     </>
