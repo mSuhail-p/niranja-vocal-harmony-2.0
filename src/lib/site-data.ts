@@ -159,3 +159,32 @@ export const streaming = [
   { name: "YouTube Music", url: "https://music.youtube.com/search?q=Niranjana+Rema" },
   { name: "Amazon Music", url: "https://music.amazon.com/search/Niranjana+Rema" },
 ];
+
+export const news = [
+  {
+    id: "oAp2XxEyvN8",
+    outlet: "MediaOne TV",
+    date: "Feature interview",
+    title: "From a Facebook music circle to playback singing",
+    summary:
+      "MediaOne TV features Niranjana Rema's journey — how a Facebook music group led her to the recording studio and her first Malayalam film playback songs.",
+  },
+];
+
+export const press = [
+  {
+    outlet: "Chaaver (2023)",
+    title: "\u201cPoomale Pothiyamme\u201d released as a lead single",
+    summary: "Composed by Justin Varghese, the track became one of the most-streamed songs from the film's album.",
+  },
+  {
+    outlet: "The Great Indian Kitchen (2021)",
+    title: "\u201cChemrantham\u201d wins wide critical praise",
+    summary: "Her voice on Mathews Pulickan's composition was widely noted in reviews of the National Award-winning film.",
+  },
+  {
+    outlet: "Carnatic revival singles",
+    title: "Classical and devotional releases across streaming platforms",
+    summary: "Kritis and thillanas including Nagumomu, Chandrachooda and Brindavani Thillana released on Spotify, Apple Music and YouTube.",
+  },
+];
