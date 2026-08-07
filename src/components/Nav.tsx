@@ -10,6 +10,7 @@ const links = [
   { to: "/gallery", label: "Gallery" },
   { to: "/music", label: "Music" },
   { to: "/events", label: "Events" },
+  { to: "/news", label: "News" },
   { to: "/contact", label: "Contact" },
 ];
 
