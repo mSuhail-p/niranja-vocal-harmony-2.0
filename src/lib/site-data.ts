@@ -154,7 +154,7 @@ export const awards = [
 ];
 
 export const streaming = [
-  { name: "Spotify", url: "https://open.spotify.com/search/Niranjana%20Rema" },
+  { name: "Spotify", url: "https://open.spotify.com/artist/0Dne0wWKxSCa9lHm8ymvsM" },
   { name: "Apple Music", url: "https://music.apple.com/search?term=Niranjana%20Rema" },
   { name: "YouTube Music", url: "https://music.youtube.com/search?q=Niranjana+Rema" },
   { name: "Amazon Music", url: "https://music.amazon.com/search/Niranjana+Rema" },
