@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Youtube, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Youtube, Facebook, Spotify, Mail, Phone, MapPin } from "lucide-react";
 import { artist, whatsappLink } from "@/lib/site-data";
 import { Divider } from "@/components/ui-lux";
 
@@ -16,17 +16,18 @@ export function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
             {[
-              { Icon: Instagram, href: "https://instagram.com" },
-              { Icon: Youtube, href: "https://youtube.com" },
-              { Icon: Facebook, href: "https://facebook.com" },
-            ].map(({ Icon, href }, i) => (
+              { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+              { Icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+              { Icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+              { Icon: Spotify, href: "https://open.spotify.com/artist/0Dne0wWKxSCa9lHm8ymvsM", label: "Spotify" },
+            ].map(({ Icon, href, label }) => (
               <a
-                key={i}
+                key={label}
                 href={href}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-border p-3 text-foreground/75 transition-colors hover:border-primary hover:text-primary"
-                aria-label="Social profile"
+                aria-label={label}
               >
                 <Icon className="size-4" />
               </a>
