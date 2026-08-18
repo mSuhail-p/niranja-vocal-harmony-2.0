@@ -1,10 +1,50 @@
-import { ExternalLink, Music2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { AlertTriangle, ExternalLink, Music2 } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/ui-lux";
 import { songs, streaming } from "@/lib/site-data";
 
 const SPOTIFY_ARTIST_ID = "0Dne0wWKxSCa9lHm8ymvsM";
+const ARTIST_URL = `https://open.spotify.com/artist/${SPOTIFY_ARTIST_ID}`;
+const EMBED_URL = `https://open.spotify.com/embed/artist/${SPOTIFY_ARTIST_ID}?utm_source=generator&theme=0&locale=en`;
+const LOAD_TIMEOUT_MS = 8000;
 
 export function MusicPlayer() {
+  const [status, setStatus] = useState<"loading" | "ready" | "failed">("loading");
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const loaded = useRef(false);
+
+  useEffect(() => {
+    if (status !== "loading") return;
+    const timer = setTimeout(() => {
+      if (loaded.current) return;
+      setStatus("failed");
+      setErrorMessage(
+        `Spotify embed did not load within ${LOAD_TIMEOUT_MS / 1000}s (network timeout / connection blocked).`,
+      );
+    }, LOAD_TIMEOUT_MS);
+
+    // Confirm Spotify's CDN is actually reachable and report the exact status.
+    const controller = new AbortController();
+    fetch(EMBED_URL, { mode: "no-cors", signal: controller.signal }).catch((err: unknown) => {
+      if (loaded.current || controller.signal.aborted) return;
+      setStatus("failed");
+      setErrorMessage(
+        `Could not reach open.spotify.com — ${err instanceof Error ? err.message : String(err)}`,
+      );
+    });
+
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [status]);
+
+  const retry = () => {
+    loaded.current = false;
+    setErrorMessage("");
+    setStatus("loading");
+  };
+
   return (
     <section id="music" className="mx-auto max-w-7xl px-5 py-24 sm:py-32">
       <SectionHeading
