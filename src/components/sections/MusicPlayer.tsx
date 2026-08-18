@@ -21,14 +21,25 @@ export function MusicPlayer() {
             <div className="mt-6 overflow-hidden rounded-xl">
               <iframe
                 title="Niranjana Rema on Spotify"
-                src={`https://open.spotify.com/embed/artist/${SPOTIFY_ARTIST_ID}?utm_source=generator&theme=0`}
+                src={`https://open.spotify.com/embed/artist/${SPOTIFY_ARTIST_ID}?utm_source=generator&theme=0&locale=en`}
                 width="100%"
                 height="420"
                 loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 className="w-full border-0"
               />
             </div>
+
+            <a
+              href={`https://open.spotify.com/artist/${SPOTIFY_ARTIST_ID}`}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 block text-center text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-primary"
+            >
+              Player not loading? Open in Spotify
+            </a>
+
 
             <div className="mt-8 grid grid-cols-2 gap-2">
               {streaming.map((s) => (
