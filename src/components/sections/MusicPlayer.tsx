@@ -58,27 +58,64 @@ export function MusicPlayer() {
           <div className="glass sticky top-28 rounded-sm p-6 sm:p-8">
             <p className="text-xs uppercase tracking-[0.3em] text-primary">Listen now</p>
 
-            <div className="mt-6 overflow-hidden rounded-xl">
-              <iframe
-                title="Niranjana Rema on Spotify"
-                src={`https://open.spotify.com/embed/artist/${SPOTIFY_ARTIST_ID}?utm_source=generator&theme=0&locale=en`}
-                width="100%"
-                height="420"
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                className="w-full border-0"
-              />
-            </div>
+            {status === "failed" ? (
+              <div className="mt-6 rounded-xl border border-destructive/40 bg-destructive/5 p-6 text-center">
+                <AlertTriangle className="mx-auto size-6 text-destructive" />
+                <p className="mt-3 text-sm">The Spotify player couldn't load here.</p>
+                <p className="mt-2 break-words text-xs text-muted-foreground">{errorMessage}</p>
+                <div className="mt-5 flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
+                  <a
+                    href={ARTIST_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-sm bg-primary px-5 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
+                  >
+                    Open in Spotify
+                    <ExternalLink className="size-3.5" />
+                  </a>
+                  <button
+                    type="button"
+                    onClick={retry}
+                    className="inline-flex items-center rounded-sm border border-border px-5 py-3 text-xs uppercase tracking-[0.18em] transition-colors hover:border-primary hover:text-primary"
+                  >
+                    Retry
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="relative mt-6 overflow-hidden rounded-xl">
+                <iframe
+                  key={status}
+                  title="Niranjana Rema on Spotify"
+                  src={EMBED_URL}
+                  width="100%"
+                  height="420"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  className="w-full border-0"
+                  onLoad={() => {
+                    loaded.current = true;
+                    setStatus("ready");
+                  }}
+                  onError={() => {
+                    setStatus("failed");
+                    setErrorMessage("The embed frame failed to load (blocked by the browser or network).");
+                  }}
+                />
+              </div>
+            )}
 
-            <a
-              href={`https://open.spotify.com/artist/${SPOTIFY_ARTIST_ID}`}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-3 block text-center text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-primary"
-            >
-              Player not loading? Open in Spotify
-            </a>
+            {status !== "failed" && (
+              <a
+                href={ARTIST_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 block text-center text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-primary"
+              >
+                Player not loading? Open in Spotify
+              </a>
+            )}
+
 
 
             <div className="mt-8 grid grid-cols-2 gap-2">
