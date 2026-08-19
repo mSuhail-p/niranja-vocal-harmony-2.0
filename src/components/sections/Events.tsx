@@ -5,14 +5,14 @@ import { events } from "@/lib/site-data";
 
 export function Events() {
   return (
-    <section id="events" className="bg-royal py-24 sm:py-32">
+    <section id="events" className="bg-royal py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeading
           eyebrow="Upcoming events"
           title="Where to hear her next."
           intro="Concert calendar and tour dates. Booking availability for private engagements is confirmed on request."
         />
-        <div className="mt-16 divide-y divide-border border-y border-border">
+        <div className="mt-10 divide-y divide-border border-y border-border">
           {events.map((e, i) => (
             <Reveal key={e.title} delay={(i % 3) * 0.06}>
               <div className="group flex flex-col gap-4 py-7 transition-colors hover:bg-card sm:flex-row sm:items-center sm:px-4">

@@ -8,12 +8,12 @@ const field =
 
 export function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-5 py-24 sm:py-32">
+    <section id="contact" className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
       <SectionHeading
         eyebrow="Contact"
         title="Tripunithura, Kochi — and online everywhere."
       />
-      <div className="mt-16 grid gap-10 lg:grid-cols-2">
+      <div className="mt-10 grid gap-10 lg:grid-cols-2">
         <Reveal>
           <div className="space-y-4">
             <a

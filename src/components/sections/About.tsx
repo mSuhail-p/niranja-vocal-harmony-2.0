@@ -3,7 +3,7 @@ import { genres, images, stats } from "@/lib/site-data";
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-7xl px-5 py-24 sm:py-32">
+    <section id="about" className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
       <div className="grid items-center gap-14 lg:grid-cols-2">
         <Reveal className="relative">
           <div className="relative overflow-hidden rounded-sm border border-border bg-card/40 p-2">

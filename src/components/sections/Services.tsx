@@ -16,14 +16,14 @@ const icons = [Mic2, HeartHandshake, Building2, Home, Disc3, Users, Globe, Schoo
 
 export function Services() {
   return (
-    <section id="services" className="bg-royal py-24 sm:py-32">
+    <section id="services" className="bg-royal py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeading
           eyebrow="Services"
           title="From temple courtyards to corporate stages."
           intro="Every engagement is scoped personally — repertoire, ensemble size and sound requirements planned with you."
         />
-        <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => {
             const Icon = icons[i % icons.length];
             return (
