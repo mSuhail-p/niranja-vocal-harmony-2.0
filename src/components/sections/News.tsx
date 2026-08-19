@@ -4,7 +4,7 @@ import { news, press } from "@/lib/site-data";
 
 export function News() {
   return (
-    <section id="news" className="bg-royal py-24 sm:py-32">
+    <section id="news" className="bg-royal py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeading
           eyebrow="In the news"
@@ -12,7 +12,7 @@ export function News() {
           intro="Television features, interviews and release coverage on Niranjana Rema's music."
         />
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-5">
+        <div className="mt-10 grid gap-10 lg:grid-cols-5">
           <div className="lg:col-span-3 space-y-10">
             {news.map((n) => (
               <Reveal key={n.id}>

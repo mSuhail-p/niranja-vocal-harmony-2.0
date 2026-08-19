@@ -5,14 +5,14 @@ import { courses } from "@/lib/site-data";
 
 export function Academy() {
   return (
-    <section id="academy" className="mx-auto max-w-7xl px-5 py-24 sm:py-32">
+    <section id="academy" className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
       <SectionHeading
         eyebrow="Singing academy"
         title="Courses built around your voice, not a syllabus."
         intro="Batches for kids, adults, working professionals and serious performers — offline in Tripunithura and online worldwide."
       />
 
-      <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {courses.map((c, i) => (
           <Reveal key={c.name} delay={(i % 3) * 0.08}>
             <article className="glass lux-hover flex h-full flex-col rounded-sm p-8">

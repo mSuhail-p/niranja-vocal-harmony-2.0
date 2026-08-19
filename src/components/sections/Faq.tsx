@@ -6,7 +6,7 @@ import { faqs } from "@/lib/site-data";
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="mx-auto max-w-4xl px-5 py-24 sm:py-32">
+    <section id="faq" className="mx-auto max-w-4xl px-5 py-14 sm:py-20">
       <SectionHeading eyebrow="FAQ" title="Questions, answered." />
       <div className="mt-14 divide-y divide-border border-y border-border">
         {faqs.map((f, i) => (

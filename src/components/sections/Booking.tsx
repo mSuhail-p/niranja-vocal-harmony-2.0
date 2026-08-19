@@ -38,7 +38,7 @@ Budget: ${form.budget}
 Message: ${form.message}`;
 
   return (
-    <section id="book" className="bg-royal py-24 sm:py-32">
+    <section id="book" className="bg-royal py-14 sm:py-20">
       <div className="mx-auto max-w-5xl px-5">
         <SectionHeading
           eyebrow="Booking"

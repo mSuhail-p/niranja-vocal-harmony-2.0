@@ -13,14 +13,14 @@ const shots = [
 
 export function Gallery({ full = false }: { full?: boolean }) {
   return (
-    <section id="gallery" className="bg-royal py-24 sm:py-32">
+    <section id="gallery" className="bg-royal py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeading
           eyebrow="Gallery"
           title="Concerts, studio sessions and quiet moments."
           intro={full ? undefined : "A glimpse of the stage and the studio."}
         />
-        <div className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-3">
           {shots.map((s, i) => (
             <Reveal key={i} delay={(i % 3) * 0.08}>
               <figure className="group overflow-hidden rounded-sm border border-border bg-card/40 p-2 transition-transform duration-500 hover:-translate-y-1.5">

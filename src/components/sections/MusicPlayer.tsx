@@ -46,14 +46,14 @@ export function MusicPlayer() {
   };
 
   return (
-    <section id="music" className="mx-auto max-w-7xl px-5 py-24 sm:py-32">
+    <section id="music" className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
       <SectionHeading
         eyebrow="Music"
         title="Film songs, kritis and devotional singles."
         intro="Listen to the official releases — streaming straight from Niranjana Rema's Spotify artist page."
       />
 
-      <div className="mt-16 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+      <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
         <Reveal>
           <div className="glass sticky top-28 rounded-sm p-6 sm:p-8">
             <p className="text-xs uppercase tracking-[0.3em] text-primary">Listen now</p>
