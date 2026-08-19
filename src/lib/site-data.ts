@@ -1,20 +1,14 @@
-import portrait from "@/assets/Screenshot_20260730_164454_Instagram.jpg.asset.json";
-import tanpuraBw from "@/assets/Screenshot_20260730_164423_Instagram.jpg.asset.json";
-import poster from "@/assets/Screenshot_20260730_164342_Instagram.jpg.asset.json";
-import saree from "@/assets/Screenshot_20260730_164438_Instagram.jpg.asset.json";
-import field from "@/assets/Screenshot_20260730_164430_Instagram.jpg.asset.json";
-import blackDress from "@/assets/Screenshot_20260730_164406_Instagram.jpg.asset.json";
-import candid from "@/assets/Screenshot_20260730_164401_Instagram.jpg.asset.json";
-
+// Images are served from /public so they work on any host (Lovable, Vercel, etc.)
 export const images = {
-  portrait: portrait.url,
-  tanpuraBw: tanpuraBw.url,
-  poster: poster.url,
-  saree: saree.url,
-  field: field.url,
-  blackDress: blackDress.url,
-  candid: candid.url,
+  portrait: "/images/Screenshot_20260730_164454_Instagram.jpg",
+  tanpuraBw: "/images/Screenshot_20260730_164423_Instagram.jpg",
+  poster: "/images/Screenshot_20260730_164342_Instagram.jpg",
+  saree: "/images/Screenshot_20260730_164438_Instagram.jpg",
+  field: "/images/Screenshot_20260730_164430_Instagram.jpg",
+  blackDress: "/images/Screenshot_20260730_164406_Instagram.jpg",
+  candid: "/images/Screenshot_20260730_164401_Instagram.jpg",
 };
+
 
 export const artist = {
   name: "Niranjana Rema",
