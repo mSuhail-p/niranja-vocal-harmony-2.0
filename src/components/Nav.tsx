@@ -1,24 +1,24 @@
-import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X, Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { artist, whatsappLink } from "@/lib/site-data";
 
-const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/classes", label: "Classes" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/music", label: "Music" },
-  { to: "/events", label: "Events" },
-  { to: "/news", label: "News" },
-  { to: "/contact", label: "Contact" },
+const navItems = [
+  { id: "hero", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "services", label: "Programs" },
+  { id: "classes", label: "Classes" },
+  { id: "gallery", label: "Gallery" },
+  { id: "music", label: "Music" },
+  { id: "events", label: "Events" },
+  { id: "news", label: "News" },
+  { id: "contact", label: "Contact" },
 ];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [light, setLight] = useState(false);
-  const path = useRouterState({ select: (s) => s.location.pathname });
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -27,7 +27,69 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => setOpen(false), [path]);
+  const scrollToSection = useCallback((id: string) => {
+    setOpen(false);
+    if (id === "hero") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActiveSection("hero");
+      return;
+    }
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "smooth" });
+      setActiveSection(id);
+    } else {
+      window.location.hash = id;
+    }
+  }, []);
+
+  // IntersectionObserver to highlight active nav link on scroll
+  useEffect(() => {
+    const sectionIds = [
+      "hero",
+      "about",
+      "services",
+      "classes",
+      "gallery",
+      "music",
+      "events",
+      "news",
+      "book",
+      "contact",
+    ];
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hashId = window.location.hash.replace("#", "");
+      if (hashId) {
+        const timer = setTimeout(() => {
+          scrollToSection(hashId);
+        }, 150);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [scrollToSection]);
 
   const toggleTheme = () => {
     const next = !light;
@@ -42,25 +104,41 @@ export function Nav() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5">
-        <Link to="/" className="group leading-none">
-          <span className="font-display text-2xl tracking-wide text-gold-gradient">Niranjana Rema</span>
+        <a
+          href="#hero"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("hero");
+          }}
+          className="group leading-none"
+        >
+          <span className="font-display text-2xl tracking-wide text-gold-gradient">
+            Niranjana Rema
+          </span>
           <span className="mt-1 block text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
             Vocalist · Academy
           </span>
-        </Link>
+        </a>
 
-        <div className="hidden items-center gap-7 lg:flex">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className={`text-[13px] uppercase tracking-[0.18em] transition-colors hover:text-primary ${
-                path === l.to ? "text-primary" : "text-foreground/80"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
+        <div className="hidden items-center gap-6 lg:flex">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
+                className={`text-[12px] uppercase tracking-[0.18em] transition-colors hover:text-primary ${
+                  isActive ? "text-primary font-medium" : "text-foreground/80"
+                }`}
+              >
+                {item.label}
+              </a>
+            );
+          })}
           <button
             onClick={toggleTheme}
             aria-label="Toggle colour mode"
@@ -68,12 +146,16 @@ export function Nav() {
           >
             {light ? <Moon className="size-4" /> : <Sun className="size-4" />}
           </button>
-          <Link
-            to="/book"
+          <a
+            href="#book"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("book");
+            }}
             className="rounded-full border border-primary/60 px-5 py-2 text-[12px] uppercase tracking-[0.22em] text-primary transition-all hover:bg-primary hover:text-primary-foreground"
           >
             Book Now
-          </Link>
+          </a>
         </div>
 
         <button
@@ -88,25 +170,45 @@ export function Nav() {
       {open ? (
         <div className="glass mt-3 border-t px-5 py-6 lg:hidden">
           <div className="flex flex-col gap-4">
-            {links.map((l) => (
-              <Link key={l.to} to={l.to} className="text-sm uppercase tracking-[0.2em] text-foreground/85">
-                {l.label}
-              </Link>
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
+                className={`text-sm uppercase tracking-[0.2em] transition-colors ${
+                  activeSection === item.id ? "text-primary font-medium" : "text-foreground/85"
+                }`}
+              >
+                {item.label}
+              </a>
             ))}
-            <div className="flex items-center gap-3 pt-2">
-              <Link
-                to="/book"
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <a
+                href="#book"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("book");
+                }}
                 className="rounded-full bg-primary px-5 py-2 text-[12px] uppercase tracking-[0.2em] text-primary-foreground"
               >
                 Book Now
-              </Link>
+              </a>
               <a
                 href={whatsappLink(`Hi ${artist.name}, I'd like to know more.`)}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full border border-border px-5 py-2 text-[12px] uppercase tracking-[0.2em]"
               >
                 WhatsApp
               </a>
-              <button onClick={toggleTheme} aria-label="Toggle colour mode" className="rounded-full border border-border p-2">
+              <button
+                onClick={toggleTheme}
+                aria-label="Toggle colour mode"
+                className="rounded-full border border-border p-2 text-foreground/80"
+              >
                 {light ? <Moon className="size-4" /> : <Sun className="size-4" />}
               </button>
             </div>

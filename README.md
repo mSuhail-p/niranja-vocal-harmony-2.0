@@ -2,513 +2,241 @@
 
 Use this prompt with Lovable, v0, Replit AI, Bolt.new, or any AI website builder:
 
-
-
-
-
 ---
-
-
 
 AI Prompt: Professional Singer Portfolio & Music Academy Website
 
-
-
 > Create a premium, modern, elegant, and fully responsive website for a professional female singer and vocal coach. The design should feel luxurious, artistic, and emotionally engaging with smooth animations, glassmorphism, soft gradients, elegant typography, and subtle parallax effects. Use a color palette of black, white, gold, and deep purple with a clean premium aesthetic.
-
-
 
 The website should include:
 
-
-
 1. Hero Section
-
-
 
 Full-screen background video or cinematic image of the singer performing.
 
-
-
 Professional headline.
-
-
 
 Short tagline.
 
-
-
 CTA buttons:
-
-
 
 Book Live Performance
 
-
-
 Join Singing Classes
-
-
 
 Watch Performances
 
-
-
-
-
-
-
 2. About the Artist
-
-
 
 Professional biography.
 
-
-
 Musical journey.
-
-
 
 Years of experience.
 
-
-
 Awards and achievements.
-
-
 
 Languages performed.
 
-
-
 Music genres (Classical, Bollywood, Ghazal, Pop, Devotional, Fusion, etc.).
-
-
-
-
 
 3. Services
 
-
-
 Live Concerts
-
-
 
 Wedding Performances
 
-
-
 Corporate Events
-
-
 
 Private Shows
 
-
-
 Studio Recording
-
-
 
 Music Collaboration
 
-
-
 Online Singing Classes
-
-
 
 Offline Singing Classes
 
-
-
 Vocal Coaching
-
-
-
-
 
 4. Singing Academy
 
-
-
 Beginner Course
-
-
 
 Intermediate Course
 
-
-
 Advanced Vocal Training
-
-
 
 Kids Batch
 
-
-
 Adults Batch
-
-
 
 Weekend Batch
 
-
-
 One-to-One Personal Training
-
-
 
 Online Classes Worldwide
 
-
-
 Duration, syllabus, fees (placeholder), timings.
-
-
 
 "Enroll Now" button.
 
-
-
-
-
 5. Gallery
-
-
 
 Masonry image gallery.
 
-
-
 Concert photos.
-
-
 
 Studio sessions.
 
-
-
 Student performances.
-
-
 
 Video gallery with YouTube integration.
 
-
-
-
-
 6. Audio Player
-
-
 
 Beautiful music player.
 
-
-
 Latest songs.
-
-
 
 Albums.
 
-
-
 Singles.
-
-
 
 Streaming links (Spotify, Apple Music, YouTube Music, Amazon Music).
 
-
-
-
-
 7. Upcoming Events
-
-
 
 Concert calendar.
 
-
-
 Booking availability.
-
-
 
 Tour dates.
 
-
-
-
-
 8. Testimonials
-
-
 
 Student reviews.
 
-
-
 Event organizer reviews.
-
-
 
 Celebrity testimonials.
 
-
-
 Animated review cards.
-
-
-
-
 
 9. Awards & Media
 
-
-
 Certificates.
-
-
 
 News coverage.
 
-
-
 TV appearances.
-
-
 
 Press kit download.
 
-
-
-
-
 10. Booking Section
-
-
 
 Event booking form.
 
-
-
 Singing class registration.
-
-
 
 Date picker.
 
-
-
 Event type.
-
-
 
 Budget range.
 
-
-
 Message box.
-
-
 
 WhatsApp booking button.
 
-
-
-
-
 11. FAQ
-
-
 
 Frequently asked questions about classes, bookings, payments, cancellations, and performances.
 
-
-
-
-
 12. Contact
-
-
 
 Phone
 
-
-
 Email
-
-
 
 WhatsApp
 
-
-
 Google Maps
-
-
 
 Social media icons
 
-
-
 Contact form
-
-
-
-
 
 13. Footer
 
-
-
 Quick links.
-
-
 
 Newsletter subscription.
 
-
-
 Social media.
-
-
 
 Copyright.
 
-
-
-
-
 Additional Features
-
-
 
 Dark/Light mode.
 
-
-
 Fully responsive for mobile, tablet, and desktop.
-
-
 
 SEO optimized.
 
-
-
 Fast loading.
-
-
 
 Accessibility compliant.
 
-
-
 Smooth scrolling.
-
-
 
 Sticky transparent navigation.
 
-
-
 Animated counters.
-
-
 
 Scroll-triggered animations.
 
-
-
 Floating WhatsApp button.
-
-
 
 Instagram feed integration.
 
-
-
 Embedded YouTube videos.
-
-
 
 Google Reviews section.
 
-
-
 Premium loading animation.
-
-
 
 Elegant hover effects.
 
-
-
 Beautiful SVG dividers.
-
-
 
 Modern cards with glassmorphism.
 
-
-
 Professional icons throughout.
-
-
-
-
 
 Pages
 
-
-
 Home
-
-
 
 About
 
-
-
 Singing Classes
-
-
 
 Gallery
 
-
-
 Videos
-
-
 
 Events
 
-
-
 Testimonials
-
-
 
 Blog
 
-
-
 Contact
 
-
-
 Book Now
-
-
-
-
 
 Build the website using React + Next.js + TypeScript + Tailwind CSS + Framer Motion + GSAP, following modern UI/UX principles. The design should be visually stunning, premium, fast, SEO-friendly, and suitable for a world-class professional singer and vocal academy. Add the images and take number and @connector:google_mail:"Gmail" From images .add tgia info Niranjana Rema is a talented Indian playback and classical singer known for her soulful tracks in Malayalam cinema and her beautifully produced Carnatic and devotional singles. Her notable songs span across popular movie soundtracks and classical revivals. [1, 2, 3]
 

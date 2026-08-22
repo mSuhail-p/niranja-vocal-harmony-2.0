@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { MessageCircle, Send } from "lucide-react";
+import { Loader2, MessageCircle, Send } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/ui-lux";
 import { artist, whatsappLink } from "@/lib/site-data";
 
@@ -12,12 +12,19 @@ const eventTypes = [
   "Studio Recording",
   "Singing Class Enrollment",
 ];
-const budgets = ["Under ₹25,000", "₹25,000 – ₹75,000", "₹75,000 – ₹2,00,000", "Above ₹2,00,000", "Class fees"];
+const budgets = [
+  "Under ₹25,000",
+  "₹25,000 – ₹75,000",
+  "₹75,000 – ₹2,00,000",
+  "Above ₹2,00,000",
+  "Class fees",
+];
 
 const field =
   "w-full rounded-sm border border-input bg-transparent px-4 py-3 text-sm outline-none transition-colors focus:border-primary";
 
 export function Booking() {
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -37,6 +44,65 @@ Type: ${form.type}
 Budget: ${form.budget}
 Message: ${form.message}`;
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    try {
+      // Direct zero-config background email sending to artist.email
+      const response = await fetch(`https://formsubmit.co/ajax/${artist.email}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          preferred_date: form.date,
+          event_type: form.type,
+          budget_range: form.budget,
+          message: form.message,
+          _subject: `New ${form.type} Enquiry from ${form.name}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok || result.success === "true" || result.success === true) {
+        toast.success(`Enquiry sent! The message was delivered to ${artist.email}.`);
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          date: "",
+          type: eventTypes[0],
+          budget: budgets[0],
+          message: "",
+        });
+        setSubmitting(false);
+        return;
+      }
+
+      // If AJAX endpoint fails, fallback to mailto
+      window.location.href = `mailto:${artist.email}?subject=${encodeURIComponent(
+        `${form.type} enquiry — ${form.name}`,
+      )}&body=${encodeURIComponent(summary)}`;
+      toast.success("Opening your email application to send the enquiry.");
+    } catch (err) {
+      console.error("Form submit error:", err);
+      window.location.href = `mailto:${artist.email}?subject=${encodeURIComponent(
+        `${form.type} enquiry — ${form.name}`,
+      )}&body=${encodeURIComponent(summary)}`;
+      toast.success("Opening your email application to send the enquiry.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="book" className="bg-royal py-14 sm:py-20">
       <div className="mx-auto max-w-5xl px-5">
@@ -48,13 +114,7 @@ Message: ${form.message}`;
         <Reveal className="mt-14">
           <form
             className="glass grid gap-5 rounded-sm p-8 sm:grid-cols-2 sm:p-10"
-            onSubmit={(e) => {
-              e.preventDefault();
-              window.location.href = `mailto:${artist.email}?subject=${encodeURIComponent(
-                `${form.type} enquiry — ${form.name}`,
-              )}&body=${encodeURIComponent(summary)}`;
-              toast.success("Opening your email app with the enquiry ready to send.");
-            }}
+            onSubmit={handleSubmit}
           >
             <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
               Full name
@@ -132,8 +192,16 @@ Message: ${form.message}`;
               />
             </label>
             <div className="flex flex-wrap gap-3 sm:col-span-2">
-              <button className="flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-[11px] uppercase tracking-[0.24em] text-primary-foreground shadow-lux">
-                <Send className="size-4" /> Send enquiry
+              <button
+                disabled={submitting}
+                className="flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-[11px] uppercase tracking-[0.24em] text-primary-foreground shadow-lux disabled:opacity-50"
+              >
+                {submitting ? (
+                  <Loader2 className="size-4 animate-spin" />
+                ) : (
+                  <Send className="size-4" />
+                )}
+                {submitting ? "Sending..." : "Send enquiry"}
               </button>
               <a
                 href={whatsappLink(summary)}

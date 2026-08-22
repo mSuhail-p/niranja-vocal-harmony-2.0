@@ -11,8 +11,8 @@ export function Footer() {
         <div className="md:col-span-2">
           <p className="font-display text-3xl text-gold-gradient">{artist.name}</p>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-            Carnatic and playback vocalist, and founder of a singing academy in Tripunithura teaching
-            students on stage and online across the world.
+            Carnatic and playback vocalist, and founder of a singing academy in Tripunithura
+            teaching students on stage and online across the world.
           </p>
           <div className="mt-6 flex gap-3">
             {[
@@ -65,7 +65,9 @@ export function Footer() {
 
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-primary">Newsletter</p>
-          <p className="mt-5 text-sm text-muted-foreground">Concert dates and new releases, once a month.</p>
+          <p className="mt-5 text-sm text-muted-foreground">
+            Concert dates and new releases, once a month.
+          </p>
           <form
             className="mt-4 flex gap-2"
             onSubmit={(e) => {

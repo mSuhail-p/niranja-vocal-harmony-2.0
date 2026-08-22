@@ -34,8 +34,7 @@ export function Academy() {
     setActive(nearest);
   };
 
-  const step = (dir: number) =>
-    scrollTo(Math.min(courses.length - 1, Math.max(0, active + dir)));
+  const step = (dir: number) => scrollTo(Math.min(courses.length - 1, Math.max(0, active + dir)));
 
   // Keyboard arrows when the track has focus
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -86,7 +85,7 @@ export function Academy() {
   };
 
   return (
-    <section id="academy" className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
+    <section id="classes" className="mx-auto max-w-7xl px-5 py-14 sm:py-20">
       <SectionHeading
         eyebrow="Singing academy"
         title="Courses built around your voice."
@@ -172,12 +171,16 @@ export function Academy() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/book"
+                <a
+                  href="#book"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className="mt-6 rounded-full border border-primary/60 px-5 py-2.5 text-center text-[11px] uppercase tracking-[0.24em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                 >
                   Enroll Now
-                </Link>
+                </a>
               </motion.article>
             ))}
           </div>

@@ -29,21 +29,22 @@ export function About() {
           />
           <div className="mt-7 space-y-4 text-muted-foreground">
             <p>
-              Niranjana Rema is an Indian playback and classical singer known for her soulful tracks in
-              Malayalam cinema and her beautifully produced Carnatic and devotional singles. Her voice
-              first reached a wide audience through <em>Chemrantham</em> in{" "}
+              Niranjana Rema is an Indian playback and classical singer known for her soulful tracks
+              in Malayalam cinema and her beautifully produced Carnatic and devotional singles. Her
+              voice first reached a wide audience through <em>Chemrantham</em> in{" "}
               <em>The Great Indian Kitchen</em>, and later through <em>Poomale Pothiyamme</em> from{" "}
               <em>Chaaver</em> and <em>Pournami Chandrika</em> from <em>Freedom Fight</em>.
             </p>
             <p>
-              Alongside cinema she has collaborated closely with music director Ratheesh Vega on a series
-              of revitalised Carnatic compositions — Chandrachooda, Nagumomu, Samaja Vara Gamana and the
-              Brindavani Thillana among them — bringing classical kritis to a contemporary listening
-              audience.
+              Alongside cinema she has collaborated closely with music director Ratheesh Vega on a
+              series of revitalised Carnatic compositions — Chandrachooda, Nagumomu, Samaja Vara
+              Gamana and the Brindavani Thillana among them — bringing classical kritis to a
+              contemporary listening audience.
             </p>
             <p>
-              From her studio in Tripunithura she teaches Carnatic and light music to children and adults,
-              in person and online, with a focus on sruthi, breath and honest musical expression.
+              From her studio in Tripunithura she teaches Carnatic and light music to children and
+              adults, in person and online, with a focus on sruthi, breath and honest musical
+              expression.
             </p>
           </div>
 
@@ -67,7 +68,9 @@ export function About() {
               <p className="font-display text-5xl text-gold-gradient">
                 <Counter value={s.value} suffix={s.suffix} />
               </p>
-              <p className="mt-3 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{s.label}</p>
+              <p className="mt-3 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
+                {s.label}
+              </p>
             </div>
           </Reveal>
         ))}

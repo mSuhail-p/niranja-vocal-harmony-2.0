@@ -24,7 +24,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={ref} className="relative min-h-[100svh] overflow-hidden">
+    <section id="hero" ref={ref} className="relative min-h-[100svh] overflow-hidden">
       <motion.div
         style={{ y }}
         initial={{ opacity: 0 }}
@@ -114,24 +114,36 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.9 }}
             className="mt-10 flex flex-wrap gap-3"
           >
-            <Link
-              to="/book"
+            <a
+              href="#book"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="rounded-full bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.22em] text-primary-foreground shadow-lux transition-transform hover:scale-[1.04]"
             >
               Book Performance
-            </Link>
-            <Link
-              to="/classes"
+            </a>
+            <a
+              href="#classes"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("classes")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="rounded-full border border-primary/60 px-7 py-3.5 text-xs uppercase tracking-[0.22em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               Singing Classes
-            </Link>
-            <Link
-              to="/music"
+            </a>
+            <a
+              href="#music"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("music")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-xs uppercase tracking-[0.22em] transition-colors hover:border-primary hover:text-primary"
             >
               <Play className="size-3.5" /> Listen
-            </Link>
+            </a>
           </motion.div>
         </div>
       </motion.div>

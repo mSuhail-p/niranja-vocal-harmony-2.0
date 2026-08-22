@@ -9,7 +9,6 @@ export const images = {
   candid: "/images/Screenshot_20260730_164401_Instagram.jpg",
 };
 
-
 export const artist = {
   name: "Niranjana Rema",
   role: "Playback & Carnatic Vocalist · Vocal Coach",
@@ -18,6 +17,8 @@ export const artist = {
   email: "npushpamgathan@gmail.com",
   location: "Tripunithura, Kochi, Kerala",
   whatsapp: "918921467689",
+  // Web3Forms Key for direct background email delivery (Get free key at https://web3forms.com)
+  web3formsKey: import.meta.env.VITE_WEB3FORMS_KEY || "",
 };
 
 export const whatsappLink = (msg: string) =>
@@ -42,12 +43,21 @@ export const genres = [
 ];
 
 export const services = [
-  { title: "Live Concerts", desc: "Full-band or classical kutcheri formats for auditoriums and festivals." },
-  { title: "Wedding Performances", desc: "Reception sets, temple ceremonies and intimate sangeet evenings." },
+  {
+    title: "Live Concerts",
+    desc: "Full-band or classical kutcheri formats for auditoriums and festivals.",
+  },
+  {
+    title: "Wedding Performances",
+    desc: "Reception sets, temple ceremonies and intimate sangeet evenings.",
+  },
   { title: "Corporate Events", desc: "Curated sets for launches, galas and annual celebrations." },
   { title: "Private Shows", desc: "House concerts and salon performances for small gatherings." },
   { title: "Studio Recording", desc: "Playback, jingles, scratch vocals and devotional albums." },
-  { title: "Music Collaboration", desc: "Guest vocals for independent releases and film projects." },
+  {
+    title: "Music Collaboration",
+    desc: "Guest vocals for independent releases and film projects.",
+  },
   { title: "Online Classes", desc: "Live one-to-one sessions for students across the world." },
   { title: "Offline Classes", desc: "In-person training at the Tripunithura studio." },
   { title: "Vocal Coaching", desc: "Breath, sruthi, voice culture and stage-performance craft." },
@@ -59,42 +69,72 @@ export const courses = [
     duration: "6 months · 2 classes / week",
     fee: "₹2,500 / month",
     timing: "Weekday evenings",
-    syllabus: ["Sarali & Janta varisai", "Sruthi and breath control", "Basic tala awareness", "Simple keerthanas"],
+    syllabus: [
+      "Sarali & Janta varisai",
+      "Sruthi and breath control",
+      "Basic tala awareness",
+      "Simple keerthanas",
+    ],
   },
   {
     name: "Intermediate Carnatic",
     duration: "9 months · 2 classes / week",
     fee: "₹3,500 / month",
     timing: "Weekday / weekend",
-    syllabus: ["Geethams & swarajathis", "Varnams in 2 speeds", "Raga alapana basics", "Devotional repertoire"],
+    syllabus: [
+      "Geethams & swarajathis",
+      "Varnams in 2 speeds",
+      "Raga alapana basics",
+      "Devotional repertoire",
+    ],
   },
   {
     name: "Advanced Vocal Training",
     duration: "12 months · 3 classes / week",
     fee: "₹5,000 / month",
     timing: "By schedule",
-    syllabus: ["Manodharma & niraval", "Kalpana swaram", "Thillana & ragam-tanam-pallavi", "Concert preparation"],
+    syllabus: [
+      "Manodharma & niraval",
+      "Kalpana swaram",
+      "Thillana & ragam-tanam-pallavi",
+      "Concert preparation",
+    ],
   },
   {
     name: "Kids Batch (5–12 yrs)",
     duration: "Ongoing · 2 classes / week",
     fee: "₹2,000 / month",
     timing: "Evenings & Saturday",
-    syllabus: ["Playful voice training", "Bhajans & rhymes in raga", "Exam & stage prep", "Confidence building"],
+    syllabus: [
+      "Playful voice training",
+      "Bhajans & rhymes in raga",
+      "Exam & stage prep",
+      "Confidence building",
+    ],
   },
   {
     name: "Adults & Hobby Batch",
     duration: "Flexible · 1–2 classes / week",
     fee: "₹2,800 / month",
     timing: "Late evenings",
-    syllabus: ["Light music & film songs", "Pitch and tone repair", "Karaoke performance", "Ghazal basics"],
+    syllabus: [
+      "Light music & film songs",
+      "Pitch and tone repair",
+      "Karaoke performance",
+      "Ghazal basics",
+    ],
   },
   {
     name: "One-to-One Personal Training",
     duration: "Custom · 45 min sessions",
     fee: "₹1,200 / session",
     timing: "On request",
-    syllabus: ["Fully personalised plan", "Recording feedback", "Audition coaching", "Worldwide online slots"],
+    syllabus: [
+      "Fully personalised plan",
+      "Recording feedback",
+      "Audition coaching",
+      "Worldwide online slots",
+    ],
   },
 ];
 
@@ -105,7 +145,11 @@ export const songs = [
   { title: "Chandrachooda", meta: "Ragamalika · Purandara Dasa", tag: "Classical" },
   { title: "Nagumomu", meta: "Madhyamavathi · Tyagaraja", tag: "Classical" },
   { title: "Samaja Vara Gamana", meta: "Hindolam · Tyagaraja", tag: "Classical" },
-  { title: "Brindavani Thillana", meta: "Brindavansaranga · Dr. M. Balamuralikrishna", tag: "Classical" },
+  {
+    title: "Brindavani Thillana",
+    meta: "Brindavansaranga · Dr. M. Balamuralikrishna",
+    tag: "Classical",
+  },
   { title: "Vallabha", meta: "Begada", tag: "Single" },
   { title: "Bhavamulona", meta: "Suddha Dhanyasi", tag: "Single" },
   { title: "Sree Hariharasutha", meta: "Saaramathi", tag: "Devotional" },
@@ -113,29 +157,107 @@ export const songs = [
 ];
 
 export const events = [
-  { date: "12 Sep", year: "2026", title: "Navaratri Kutcheri", venue: "Sree Poornathrayeesa Temple, Tripunithura", status: "Tickets open" },
-  { date: "04 Oct", year: "2026", title: "Melodies of Kerala — Film Hits Live", venue: "Kochi Marriott Grand Ballroom", status: "Few seats" },
-  { date: "22 Nov", year: "2026", title: "Ragas & Ghazals Evening", venue: "Bharat Bhavan, Thiruvananthapuram", status: "Tickets open" },
-  { date: "19 Dec", year: "2026", title: "Student Annual Showcase", venue: "Academy Auditorium, Tripunithura", status: "Invite only" },
-  { date: "10 Jan", year: "2027", title: "Gulf Tour — Carnatic Nights", venue: "Dubai · Abu Dhabi · Muscat", status: "Booking" },
+  {
+    date: "12 Sep",
+    year: "2026",
+    title: "Navaratri Kutcheri",
+    venue: "Sree Poornathrayeesa Temple, Tripunithura",
+    status: "Tickets open",
+  },
+  {
+    date: "04 Oct",
+    year: "2026",
+    title: "Melodies of Kerala — Film Hits Live",
+    venue: "Kochi Marriott Grand Ballroom",
+    status: "Few seats",
+  },
+  {
+    date: "22 Nov",
+    year: "2026",
+    title: "Ragas & Ghazals Evening",
+    venue: "Bharat Bhavan, Thiruvananthapuram",
+    status: "Tickets open",
+  },
+  {
+    date: "19 Dec",
+    year: "2026",
+    title: "Student Annual Showcase",
+    venue: "Academy Auditorium, Tripunithura",
+    status: "Invite only",
+  },
+  {
+    date: "10 Jan",
+    year: "2027",
+    title: "Gulf Tour — Carnatic Nights",
+    venue: "Dubai · Abu Dhabi · Muscat",
+    status: "Booking",
+  },
 ];
 
 export const testimonials = [
-  { quote: "Her Chemrantham still gives me goosebumps. On stage she carries a rare stillness — the raga simply arrives.", name: "Anand Menon", role: "Music Director, Kochi" },
-  { quote: "My daughter joined the kids batch unable to hold a note. In a year she performed a full keerthana at the temple.", name: "Lakshmi Nair", role: "Parent, Tripunithura" },
-  { quote: "We booked her for our reception. Flawless coordination, and the ghazal set had guests in tears.", name: "Rahul & Divya", role: "Wedding clients" },
-  { quote: "Online classes from Dubai felt as personal as sitting in her room. Her feedback is precise and kind.", name: "Sruthi Venkat", role: "Student, UAE" },
-  { quote: "One of the most reliable voices we've worked with for corporate galas — professional to the last minute.", name: "Vinod Kumar", role: "Event Producer" },
-  { quote: "The Brindavani Thillana recording was a masterclass in control. A voice built for the studio.", name: "Ratheesh Vega", role: "Music Producer" },
+  {
+    quote:
+      "Her Chemrantham still gives me goosebumps. On stage she carries a rare stillness — the raga simply arrives.",
+    name: "Anand Menon",
+    role: "Music Director, Kochi",
+  },
+  {
+    quote:
+      "My daughter joined the kids batch unable to hold a note. In a year she performed a full keerthana at the temple.",
+    name: "Lakshmi Nair",
+    role: "Parent, Tripunithura",
+  },
+  {
+    quote:
+      "We booked her for our reception. Flawless coordination, and the ghazal set had guests in tears.",
+    name: "Rahul & Divya",
+    role: "Wedding clients",
+  },
+  {
+    quote:
+      "Online classes from Dubai felt as personal as sitting in her room. Her feedback is precise and kind.",
+    name: "Sruthi Venkat",
+    role: "Student, UAE",
+  },
+  {
+    quote:
+      "One of the most reliable voices we've worked with for corporate galas — professional to the last minute.",
+    name: "Vinod Kumar",
+    role: "Event Producer",
+  },
+  {
+    quote:
+      "The Brindavani Thillana recording was a masterclass in control. A voice built for the studio.",
+    name: "Ratheesh Vega",
+    role: "Music Producer",
+  },
 ];
 
 export const faqs = [
-  { q: "Do I need prior experience to join?", a: "Not at all. The Beginner Foundation batch starts from sruthi, breath and the very first varisai exercises." },
-  { q: "How do online classes work?", a: "Live one-to-one or small-group sessions over Zoom or Google Meet, with recorded practice notes shared after each class." },
-  { q: "What are the payment terms?", a: "Fees are paid monthly in advance via UPI or bank transfer. Performance bookings require a 40% advance to confirm the date." },
-  { q: "What is the cancellation policy?", a: "Classes cancelled 12 hours in advance are rescheduled free. Event bookings cancelled within 15 days retain the advance." },
-  { q: "How far do you travel for performances?", a: "Across India and internationally. Travel and accommodation are arranged by the host for outstation events." },
-  { q: "Can you perform in languages other than Malayalam?", a: "Yes — Malayalam, Tamil, Telugu, Kannada, Sanskrit, Hindi, Urdu and English." },
+  {
+    q: "Do I need prior experience to join?",
+    a: "Not at all. The Beginner Foundation batch starts from sruthi, breath and the very first varisai exercises.",
+  },
+  {
+    q: "How do online classes work?",
+    a: "Live one-to-one or small-group sessions over Zoom or Google Meet, with recorded practice notes shared after each class.",
+  },
+  {
+    q: "What are the payment terms?",
+    a: "Fees are paid monthly in advance via UPI or bank transfer. Performance bookings require a 40% advance to confirm the date.",
+  },
+  {
+    q: "What is the cancellation policy?",
+    a: "Classes cancelled 12 hours in advance are rescheduled free. Event bookings cancelled within 15 days retain the advance.",
+  },
+  {
+    q: "How far do you travel for performances?",
+    a: "Across India and internationally. Travel and accommodation are arranged by the host for outstation events.",
+  },
+  {
+    q: "Can you perform in languages other than Malayalam?",
+    a: "Yes — Malayalam, Tamil, Telugu, Kannada, Sanskrit, Hindi, Urdu and English.",
+  },
 ];
 
 export const awards = [
@@ -169,16 +291,19 @@ export const press = [
   {
     outlet: "Chaaver (2023)",
     title: "\u201cPoomale Pothiyamme\u201d released as a lead single",
-    summary: "Composed by Justin Varghese, the track became one of the most-streamed songs from the film's album.",
+    summary:
+      "Composed by Justin Varghese, the track became one of the most-streamed songs from the film's album.",
   },
   {
     outlet: "The Great Indian Kitchen (2021)",
     title: "\u201cChemrantham\u201d wins wide critical praise",
-    summary: "Her voice on Mathews Pulickan's composition was widely noted in reviews of the National Award-winning film.",
+    summary:
+      "Her voice on Mathews Pulickan's composition was widely noted in reviews of the National Award-winning film.",
   },
   {
     outlet: "Carnatic revival singles",
     title: "Classical and devotional releases across streaming platforms",
-    summary: "Kritis and thillanas including Nagumomu, Chandrachooda and Brindavani Thillana released on Spotify, Apple Music and YouTube.",
+    summary:
+      "Kritis and thillanas including Nagumomu, Chandrachooda and Brindavani Thillana released on Spotify, Apple Music and YouTube.",
   },
 ];

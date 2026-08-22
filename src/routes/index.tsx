@@ -1,11 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { Awards } from "@/components/sections/Awards";
 import { Services } from "@/components/sections/Services";
 import { Academy } from "@/components/sections/Academy";
 import { Gallery } from "@/components/sections/Gallery";
 import { MusicPlayer } from "@/components/sections/MusicPlayer";
+import { Events } from "@/components/sections/Events";
 import { News } from "@/components/sections/News";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Faq } from "@/components/sections/Faq";
 import { Booking } from "@/components/sections/Booking";
 import { Contact } from "@/components/sections/Contact";
 import { images } from "@/lib/site-data";
@@ -35,7 +39,12 @@ export const Route = createFileRoute("/")({
           genre: ["Carnatic", "Playback", "Devotional", "Ghazal"],
           telephone: "+91 89214 67689",
           email: "npushpamgathan@gmail.com",
-          address: { "@type": "PostalAddress", addressLocality: "Tripunithura", addressRegion: "Kerala", addressCountry: "IN" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Tripunithura",
+            addressRegion: "Kerala",
+            addressCountry: "IN",
+          },
         }),
       },
     ],
@@ -48,11 +57,15 @@ function Index() {
     <>
       <Hero />
       <About />
+      <Awards />
       <Services />
       <Academy />
-      <Gallery />
+      <Gallery full={true} />
       <MusicPlayer />
+      <Events />
       <News />
+      <Testimonials />
+      <Faq />
       <Booking />
       <Contact />
     </>

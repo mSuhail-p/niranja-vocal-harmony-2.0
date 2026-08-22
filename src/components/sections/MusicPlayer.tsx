@@ -99,7 +99,9 @@ export function MusicPlayer() {
                   }}
                   onError={() => {
                     setStatus("failed");
-                    setErrorMessage("The embed frame failed to load (blocked by the browser or network).");
+                    setErrorMessage(
+                      "The embed frame failed to load (blocked by the browser or network).",
+                    );
                   }}
                 />
               </div>
@@ -115,8 +117,6 @@ export function MusicPlayer() {
                 Player not loading? Open in Spotify
               </a>
             )}
-
-
 
             <div className="mt-8 grid grid-cols-2 gap-2">
               {streaming.map((s) => (

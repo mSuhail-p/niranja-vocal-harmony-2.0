@@ -18,7 +18,9 @@ export function Events() {
               <div className="group flex flex-col gap-4 py-7 transition-colors hover:bg-card sm:flex-row sm:items-center sm:px-4">
                 <div className="w-28 shrink-0">
                   <p className="font-display text-3xl text-gold-gradient">{e.date}</p>
-                  <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{e.year}</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                    {e.year}
+                  </p>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl">{e.title}</h3>
