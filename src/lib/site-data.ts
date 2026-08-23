@@ -1,11 +1,11 @@
 export const images = {
-  portrait: "/images/Screenshot_20260730_164454_Instagram.jpg",
-  tanpuraBw: "/images/Screenshot_20260730_164423_Instagram.jpg",
-  poster: "/images/Screenshot_20260730_164342_Instagram.jpg",
-  saree: "/images/Screenshot_20260730_164438_Instagram.jpg",
-  field: "/images/Screenshot_20260730_164430_Instagram.jpg",
-  blackDress: "/images/Screenshot_20260730_164406_Instagram.jpg",
-  candid: "/images/Screenshot_20260730_164401_Instagram.jpg",
+  portrait: "/images/Screenshot_20260730_164454_Instagram.webp",
+  tanpuraBw: "/images/Screenshot_20260730_164423_Instagram.webp",
+  poster: "/images/Screenshot_20260730_164342_Instagram.webp",
+  saree: "/images/Screenshot_20260730_164438_Instagram.webp",
+  field: "/images/Screenshot_20260730_164430_Instagram.webp",
+  blackDress: "/images/Screenshot_20260730_164406_Instagram.webp",
+  candid: "/images/Screenshot_20260730_164401_Instagram.webp",
 };
 
 
