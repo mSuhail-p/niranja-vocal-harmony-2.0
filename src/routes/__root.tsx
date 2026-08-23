@@ -91,34 +91,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    // links: [
-    //   { rel: "stylesheet", href: appCss },
-    //   { rel: "preconnect", href: "https://fonts.googleapis.com" },
-    //   { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-    //   {
-    //     rel: "stylesheet",
-    //     href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap",
-    //   },
-    //   { rel: "icon", href: "/favicon.png", sizes: "any" },
-    //   { rel: "icon", type: "image/svg+xml", href: "/favicon.png" },
-    //   { rel: "shortcut icon", href: "/favicon.pn" },
-    //   { rel: "apple-touch-icon", href: "/favicon.png" },
-    // ],
     links: [
       { rel: "stylesheet", href: appCss },
-
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap",
       },
-
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "icon", href: "/favicon.png", sizes: "any" },
+      { rel: "icon", href: "/favicon.png" },
+      { rel: "shortcut icon", href: "/favicon.pn" },
       { rel: "apple-touch-icon", href: "/favicon.png" },
     ],
   }),
