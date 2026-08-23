@@ -5,7 +5,7 @@ export const images = {
   poster: "/images/Screenshot_20260730_164342_Instagram.jpg",
   saree: "/images/Screenshot_20260730_164438_Instagram.jpg",
   field: "/images/Screenshot_20260730_164430_Instagram.jpg",
-  blackDress: "/images/Screenshot_20260730_164401_Instagram.jpg",
+  blackDress: "/images/Screenshot_20260730_164406_Instagram.jpg",
   candid: "/images/Screenshot_20260730_164401_Instagram.jpg",
 };
 
@@ -14,7 +14,7 @@ export const artist = {
   role: "Playback & Carnatic Vocalist · Vocal Coach",
   phone: "+918921467689",
   phoneDisplay: "+91 89214 67689",
-  email: "msuhailkzp@gmail.com",
+  email: "npushpamgathan@gmail.com",
   location: "Tripunithura, Kochi, Kerala",
   whatsapp: "918921467689",
   // Web3Forms Key for direct background email delivery (Get free key at https://web3forms.com)
