@@ -1,20 +1,13 @@
-import portraitImg from "/public/images/Screenshot_20260730_164454_Instagram.webp?url";
-import tanpuraBwImg from "/public/images/Screenshot_20260730_164423_Instagram.webp?url";
-import posterImg from "/public/images/Screenshot_20260730_164342_Instagram.webp?url";
-import sareeImg from "/public/images/Screenshot_20260730_164438_Instagram.webp?url";
-import fieldImg from "/public/images/Screenshot_20260730_164430_Instagram.webp?url";
-import blackDressImg from "/public/images/Screenshot_20260730_164406_Instagram.webp?url";
-import candidImg from "/public/images/Screenshot_20260730_164401_Instagram.webp?url";
-
 export const images = {
-  portrait: portraitImg,
-  tanpuraBw: tanpuraBwImg,
-  poster: posterImg,
-  saree: sareeImg,
-  field: fieldImg,
-  blackDress: blackDressImg,
-  candid: candidImg,
+  portrait: "/images/Screenshot_20260730_164454_Instagram.webp",
+  tanpuraBw: "/images/Screenshot_20260730_164423_Instagram.webp",
+  poster: "/images/Screenshot_20260730_164342_Instagram.webp",
+  saree: "/images/Screenshot_20260730_164438_Instagram.webp",
+  field: "/images/Screenshot_20260730_164430_Instagram.webp",
+  blackDress: "/images/Screenshot_20260730_164406_Instagram.webp",
+  candid: "/images/Screenshot_20260730_164401_Instagram.webp",
 };
+
 
 export const artist = {
   name: "Niranjana Rema",
