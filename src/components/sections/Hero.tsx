@@ -118,6 +118,11 @@ export function Hero() {
               href="#book"
               onClick={(e) => {
                 e.preventDefault();
+                window.dispatchEvent(
+                  new CustomEvent("select-enquiry-mode", {
+                    detail: { mode: "program" },
+                  })
+                );
                 document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
               }}
               className="rounded-full bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.22em] text-primary-foreground shadow-lux transition-transform hover:scale-[1.04]"

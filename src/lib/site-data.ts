@@ -5,7 +5,7 @@ export const images = {
   poster: "/images/Screenshot_20260730_164342_Instagram.jpg",
   saree: "/images/Screenshot_20260730_164438_Instagram.jpg",
   field: "/images/Screenshot_20260730_164430_Instagram.jpg",
-  blackDress: "/images/Screenshot_20260730_164406_Instagram.jpg",
+  blackDress: "/images/Screenshot_20260730_164401_Instagram.jpg",
   candid: "/images/Screenshot_20260730_164401_Instagram.jpg",
 };
 
@@ -14,7 +14,7 @@ export const artist = {
   role: "Playback & Carnatic Vocalist · Vocal Coach",
   phone: "+918921467689",
   phoneDisplay: "+91 89214 67689",
-  email: "npushpamgathan@gmail.com",
+  email: "msuhailkzp@gmail.com",
   location: "Tripunithura, Kochi, Kerala",
   whatsapp: "918921467689",
   // Web3Forms Key for direct background email delivery (Get free key at https://web3forms.com)
@@ -45,7 +45,7 @@ export const genres = [
 export const services = [
   {
     title: "Live Concerts",
-    desc: "Full-band or classical kutcheri formats for auditoriums and festivals.",
+    desc: "Full-band or classical Kacheri formats for auditoriums and festivals.",
   },
   {
     title: "Wedding Performances",
@@ -261,12 +261,14 @@ export const faqs = [
 ];
 
 export const awards = [
-  { title: "Kerala State Youth Festival — First Prize, Classical Music", org: "Govt. of Kerala" },
   { title: "MA in Music (Carnatic Vocal)", org: "University Gold Medallist" },
   { title: "Featured Playback Voice", org: "Chaaver · The Great Indian Kitchen · Freedom Fight" },
-  { title: "Doordarshan & Asianet Televised Concerts", org: "TV appearances" },
+  {
+    title: "Kalabhavan Mani Memorial Award — 2021",
+    org: "State Award — The Great Indian Kitchen"
+  },
   { title: "Carnatic Revival Series with Ratheesh Vega", org: "8 singles released" },
-  { title: "Temple Festival Invitee Artist", org: "Poornathrayeesa · Guruvayur · Chottanikkara" },
+
 ];
 
 export const streaming = [

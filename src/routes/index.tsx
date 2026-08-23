@@ -6,7 +6,7 @@ import { Services } from "@/components/sections/Services";
 import { Academy } from "@/components/sections/Academy";
 import { Gallery } from "@/components/sections/Gallery";
 import { MusicPlayer } from "@/components/sections/MusicPlayer";
-import { Events } from "@/components/sections/Events";
+// import { Events } from "@/components/sections/Events";
 import { News } from "@/components/sections/News";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
@@ -62,7 +62,7 @@ function Index() {
       <Academy />
       <Gallery full={true} />
       <MusicPlayer />
-      <Events />
+      {/* <Events /> */}
       <News />
       <Testimonials />
       <Faq />

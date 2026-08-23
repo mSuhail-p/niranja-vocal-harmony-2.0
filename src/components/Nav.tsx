@@ -9,7 +9,7 @@ const navItems = [
   { id: "classes", label: "Classes" },
   { id: "gallery", label: "Gallery" },
   { id: "music", label: "Music" },
-  { id: "events", label: "Events" },
+  // { id: "events", label: "Events" },
   { id: "news", label: "News" },
   { id: "contact", label: "Contact" },
 ];
@@ -99,9 +99,8 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass py-3" : "border-b border-transparent py-5"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "glass py-3" : "border-b border-transparent py-5"
+        }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5">
         <a
@@ -131,9 +130,8 @@ export function Nav() {
                   e.preventDefault();
                   scrollToSection(item.id);
                 }}
-                className={`text-[12px] uppercase tracking-[0.18em] transition-colors hover:text-primary ${
-                  isActive ? "text-primary font-medium" : "text-foreground/80"
-                }`}
+                className={`text-[12px] uppercase tracking-[0.18em] transition-colors hover:text-primary ${isActive ? "text-primary font-medium" : "text-foreground/80"
+                  }`}
               >
                 {item.label}
               </a>
@@ -150,6 +148,11 @@ export function Nav() {
             href="#book"
             onClick={(e) => {
               e.preventDefault();
+              window.dispatchEvent(
+                new CustomEvent("select-enquiry-mode", {
+                  detail: { mode: "program" },
+                })
+              );
               scrollToSection("book");
             }}
             className="rounded-full border border-primary/60 px-5 py-2 text-[12px] uppercase tracking-[0.22em] text-primary transition-all hover:bg-primary hover:text-primary-foreground"
@@ -178,9 +181,8 @@ export function Nav() {
                   e.preventDefault();
                   scrollToSection(item.id);
                 }}
-                className={`text-sm uppercase tracking-[0.2em] transition-colors ${
-                  activeSection === item.id ? "text-primary font-medium" : "text-foreground/85"
-                }`}
+                className={`text-sm uppercase tracking-[0.2em] transition-colors ${activeSection === item.id ? "text-primary font-medium" : "text-foreground/85"
+                  }`}
               >
                 {item.label}
               </a>
@@ -190,6 +192,11 @@ export function Nav() {
                 href="#book"
                 onClick={(e) => {
                   e.preventDefault();
+                  window.dispatchEvent(
+                    new CustomEvent("select-enquiry-mode", {
+                      detail: { mode: "program" },
+                    })
+                  );
                   scrollToSection("book");
                 }}
                 className="rounded-full bg-primary px-5 py-2 text-[12px] uppercase tracking-[0.2em] text-primary-foreground"
