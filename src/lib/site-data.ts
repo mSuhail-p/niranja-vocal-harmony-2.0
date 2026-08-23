@@ -1,10 +1,10 @@
-import portraitImg from "/public/images/Screenshot_20260730_164454_Instagram.jpg?url";
-import tanpuraBwImg from "/public/images/Screenshot_20260730_164423_Instagram.jpg?url";
-import posterImg from "/public/images/Screenshot_20260730_164342_Instagram.jpg?url";
-import sareeImg from "/public/images/Screenshot_20260730_164438_Instagram.jpg?url";
-import fieldImg from "/public/images/Screenshot_20260730_164430_Instagram.jpg?url";
-import blackDressImg from "/public/images/Screenshot_20260730_164406_Instagram.jpg?url";
-import candidImg from "/public/images/Screenshot_20260730_164401_Instagram.jpg?url";
+import portraitImg from "/public/images/Screenshot_20260730_164454_Instagram.webp?url";
+import tanpuraBwImg from "/public/images/Screenshot_20260730_164423_Instagram.webp?url";
+import posterImg from "/public/images/Screenshot_20260730_164342_Instagram.webp?url";
+import sareeImg from "/public/images/Screenshot_20260730_164438_Instagram.webp?url";
+import fieldImg from "/public/images/Screenshot_20260730_164430_Instagram.webp?url";
+import blackDressImg from "/public/images/Screenshot_20260730_164406_Instagram.webp?url";
+import candidImg from "/public/images/Screenshot_20260730_164401_Instagram.webp?url";
 
 export const images = {
   portrait: portraitImg,
