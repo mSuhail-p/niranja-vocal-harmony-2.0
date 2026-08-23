@@ -1,12 +1,19 @@
-// Images are served from /public so they work on any host (Lovable, Vercel, etc.)
+import portraitImg from "/public/images/Screenshot_20260730_164454_Instagram.jpg?url";
+import tanpuraBwImg from "/public/images/Screenshot_20260730_164423_Instagram.jpg?url";
+import posterImg from "/public/images/Screenshot_20260730_164342_Instagram.jpg?url";
+import sareeImg from "/public/images/Screenshot_20260730_164438_Instagram.jpg?url";
+import fieldImg from "/public/images/Screenshot_20260730_164430_Instagram.jpg?url";
+import blackDressImg from "/public/images/Screenshot_20260730_164406_Instagram.jpg?url";
+import candidImg from "/public/images/Screenshot_20260730_164401_Instagram.jpg?url";
+
 export const images = {
-  portrait: "/images/Screenshot_20260730_164454_Instagram.jpg",
-  tanpuraBw: "/images/Screenshot_20260730_164423_Instagram.jpg",
-  poster: "/images/Screenshot_20260730_164342_Instagram.jpg",
-  saree: "/images/Screenshot_20260730_164438_Instagram.jpg",
-  field: "/images/Screenshot_20260730_164430_Instagram.jpg",
-  blackDress: "/images/Screenshot_20260730_164406_Instagram.jpg",
-  candid: "/images/Screenshot_20260730_164401_Instagram.jpg",
+  portrait: portraitImg,
+  tanpuraBw: tanpuraBwImg,
+  poster: posterImg,
+  saree: sareeImg,
+  field: fieldImg,
+  blackDress: blackDressImg,
+  candid: candidImg,
 };
 
 export const artist = {
