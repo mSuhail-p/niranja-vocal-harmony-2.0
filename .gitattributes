@@ -1,1 +1,20 @@
 * text eol=lf
+
+# Binary files — do NOT apply text/eol conversion
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.mp4 binary
+*.webm binary
+*.mp3 binary
+*.ogg binary
+*.pdf binary
