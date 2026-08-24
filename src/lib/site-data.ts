@@ -1,13 +1,23 @@
-export const images = {
-  portrait: "/images/Screenshot_20260730_164454_Instagram.webp",
-  tanpuraBw: "/images/Screenshot_20260730_164423_Instagram.webp",
-  poster: "/images/Screenshot_20260730_164342_Instagram.webp",
-  saree: "/images/Screenshot_20260730_164438_Instagram.webp",
-  field: "/images/Screenshot_20260730_164430_Instagram.webp",
-  blackDress: "/images/Screenshot_20260730_164406_Instagram.webp",
-  candid: "/images/Screenshot_20260730_164401_Instagram.webp",
-};
+// export const images = {
+//   portrait: "/images/Screenshot_20260730_164454_Instagram.webp",
+//   tanpuraBw: "/images/Screenshot_20260730_164423_Instagram.webp",
+//   poster: "/images/Screenshot_20260730_164342_Instagram.webp",
+//   saree: "/images/Screenshot_20260730_164438_Instagram.webp",
+//   field: "/images/Screenshot_20260730_164430_Instagram.webp",
+//   blackDress: "/images/Screenshot_20260730_164406_Instagram.webp",
+//   candid: "/images/Screenshot_20260730_164401_Instagram.webp",
+// };
 
+
+export const images = {
+  portrait: "/images/lookback.webp",
+  tanpuraBw: "/images/mirror.webp",
+  poster: "/images/poster.webp",
+  saree: "/images/saree.webp",
+  field: "/images/studio.webp",
+  blackDress: "/images/mirror2.webp",
+  candid: "/images/veena.webp",
+};
 
 export const artist = {
   name: "Niranjana Rema",
