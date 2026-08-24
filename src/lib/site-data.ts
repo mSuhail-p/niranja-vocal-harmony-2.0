@@ -19,6 +19,9 @@ export const images = {
   candid: "/images/veena.webp",
 };
 
+
+
+
 export const artist = {
   name: "Niranjana Rema",
   role: "Playback & Carnatic Vocalist · Vocal Coach",
